@@ -1,0 +1,8 @@
+
+<h1>Posts</h1>
+
+<ol>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.title, "http://#{post.url}" %> <%= link_to "comment", post_path(post) %></li>
+  <% end %>
+</ol>
